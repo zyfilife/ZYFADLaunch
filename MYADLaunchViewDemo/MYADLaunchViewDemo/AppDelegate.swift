@@ -23,11 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = viewController
         self.window?.makeKeyAndVisible()
         
-        let view = MFAdLuanchView(frame: UIScreen.main.bounds, type: MFAdLuanchCoolDownType.progress, firstShow: true)
-        view.endDisplayingBlock = {
+        let _ = MFAdLuanchView(type: MFAdLuanchCoolDownType.progress, isFirstLaunch: true, frame: UIScreen.main.bounds) {
             print("广告页显示结束")
         }
-        self.window?.addSubview(view)
         return true
     }
 
