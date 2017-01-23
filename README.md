@@ -1,2 +1,2 @@
 # MYADLuanchView
-启动页、广告页
+启动广告页
