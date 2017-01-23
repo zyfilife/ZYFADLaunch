@@ -8,22 +8,16 @@
 
 import UIKit
 
-enum MFAdLuanchCoolDownType {
+enum MYCoolDownType {
     case progress, text
 }
 
 let kScreenWidth = UIScreen.main.bounds.width
 let kScreenHeight = UIScreen.main.bounds.height
 
-class MFAdLuanchView: UIView {
+class MYADLaunchView: UIView {
     
-    var loadImageSuccess = true
-    
-    var imagePath: String {
-        return "http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1211/08/c1/15469697_1352365402404.jpg"
-    }
-    
-    var type:MFAdLuanchCoolDownType = .progress
+    var coolDownType:MYCoolDownType = .progress
     
     fileprivate var isShowFlyAnimation = false
     
@@ -37,6 +31,15 @@ class MFAdLuanchView: UIView {
             if newValue {
                 self.addSubview(self.launchImageView)
             }
+        }
+    }
+    
+    var bottomDistance: CGFloat {
+        get {
+            return self.bottomDistance
+        }
+        set {
+            self.adImageView.frame.size.height -= newValue
         }
     }
     
@@ -54,7 +57,7 @@ class MFAdLuanchView: UIView {
         button.alpha = 0.6
         button.setTitle("跳", for: UIControlState.normal)
         button.titleLabel?.textAlignment = .center
-        button.addTarget(self, action: #selector(MFAdLuanchView.skip), for: UIControlEvents.touchUpInside)
+        button.addTarget(self, action: #selector(MYADLaunchView.skip), for: UIControlEvents.touchUpInside)
         return button
     }()
     
@@ -72,10 +75,10 @@ class MFAdLuanchView: UIView {
         return view
     }()
     
-    init(type: MFAdLuanchCoolDownType, isFirstLaunch: Bool, frame: CGRect, withBlock endDisplayingBlock: @escaping ()->Void) {
+    init(coolDownType: MYCoolDownType, isFirstLaunch: Bool, frame: CGRect, withBlock endDisplayingBlock: @escaping ()->Void) {
         super.init(frame: frame)
         self.endDisplayingBlock = endDisplayingBlock
-        self.type = type
+        self.coolDownType = coolDownType
         self.isFirstLaunch = isFirstLaunch
         UIApplication.shared.keyWindow?.addSubview(self)
         self.getImagePathFromWebServers(success: { (imagePath) in
@@ -124,7 +127,7 @@ class MFAdLuanchView: UIView {
             if imagePath != nil && imagePath!.characters.count > 0 {
                 success(imagePath!)
             }else {
-                let error = NSError(domain: "www.zyfilife.com", code: 0, userInfo: nil)
+                let error = NSError(domain: "www.zyfilife.com", code: 1, userInfo: nil)
                 failure(error)
             }
         }
@@ -147,7 +150,7 @@ class MFAdLuanchView: UIView {
     }
     
     func displayProgressView() {
-        switch self.type {
+        switch self.coolDownType {
         case .progress:
             self.addSubview(self.skipButton)
             self.addSubview(self.progressView)

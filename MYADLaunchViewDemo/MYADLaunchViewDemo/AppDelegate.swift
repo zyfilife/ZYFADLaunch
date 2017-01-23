@@ -23,9 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = viewController
         self.window?.makeKeyAndVisible()
         
-        let _ = MFAdLuanchView(type: MFAdLuanchCoolDownType.progress, isFirstLaunch: true, frame: UIScreen.main.bounds) {
+        let adLaunchView = MYADLaunchView(coolDownType: .progress, isFirstLaunch: true, frame: UIScreen.main.bounds) {
             print("广告页显示结束")
         }
+        //optional, default 0
+        adLaunchView.bottomDistance = 200
         return true
     }
 
