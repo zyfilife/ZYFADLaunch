@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 enum MYCoolDownType {
     case progress, text
@@ -22,6 +23,10 @@ class MYADLaunchView: UIView {
     fileprivate var isShowFlyAnimation = false
     
     fileprivate var endDisplayingBlock: (()->Void)?
+    
+    
+    
+    var manager: SessionManager?
     
     var isFirstLaunch: Bool {
         get {
@@ -44,13 +49,14 @@ class MYADLaunchView: UIView {
     }
     
     lazy var adImageView: UIImageView = {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight))
+        let imageView = UIImageView(frame: self.bounds)
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         return imageView
     }()
     
     lazy var skipButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: kScreenWidth-60, y: 20, width: 50, height: 50))
+        let button = UIButton(frame: CGRect(x: self.frame.size.width-60, y: 20, width: 50, height: 50))
         button.layer.cornerRadius = 25
         button.layer.masksToBounds = true
         button.backgroundColor = .black
@@ -62,7 +68,7 @@ class MYADLaunchView: UIView {
     }()
     
     lazy var progressView: DACircularProgressView = {
-        let progressView = DACircularProgressView(frame: CGRect(x: kScreenWidth-60, y: 20, width: 50, height: 50))
+        let progressView = DACircularProgressView(frame: self.skipButton.frame)
         progressView.isUserInteractionEnabled = false
         progressView.progress = 0
         progressView.setProgress(1, animated: true, initialDelay: 0, withDuration: 3)
@@ -80,8 +86,12 @@ class MYADLaunchView: UIView {
         self.endDisplayingBlock = endDisplayingBlock
         self.coolDownType = coolDownType
         self.isFirstLaunch = isFirstLaunch
+        let confige = URLSessionConfiguration.default
+        confige.timeoutIntervalForRequest = 3
+        confige.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
+        manager = SessionManager(configuration: confige)
         UIApplication.shared.keyWindow?.addSubview(self)
-        self.getImagePathFromWebServers(success: { (imagePath) in
+        self.getImagePathFromServers(success: { (imagePath) in
             self.isShowFlyAnimation = true
             self.displayAdImageView(imagePath: imagePath, success: { 
                 self.addSubview(self.adImageView)
@@ -93,6 +103,7 @@ class MYADLaunchView: UIView {
                 self.removeFromSuperview()
             })
         }) { (error) in
+            print(error.debugDescription)
             self.isShowFlyAnimation = false
             self.removeFromSuperview()
         }
@@ -100,6 +111,11 @@ class MYADLaunchView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
+        self.frame = UIScreen.main.bounds
     }
     
     override func removeFromSuperview() {
@@ -121,14 +137,18 @@ class MYADLaunchView: UIView {
         }
     }
     
-    func getImagePathFromWebServers(success: @escaping (_ imagePath: String) -> Void, failure: @escaping (_ error: NSError) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1) {
-            let imagePath: String? = "http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1211/08/c1/15469697_1352365402404.jpg"
-            if imagePath != nil && imagePath!.characters.count > 0 {
-                success(imagePath!)
+    func getImagePathFromServers(success: @escaping (_ imagePath: String) -> Void, failure: @escaping (_ error: NSError) -> Void) {
+        let parameters = Parameters(dictionaryLiteral: ("unitID", ""))
+        manager?.request("http://xzl.zjzdy.net/api/LoginApi/GetAdUrl", parameters: parameters).responseJSON { (response) in
+            if response.result.isSuccess {
+                print(response.result.value as Any)
+                if let dict = response.result.value as? [String: Any] {
+                    if let url = dict["adurl"] as? String{
+                        success(url)
+                    }
+                }
             }else {
-                let error = NSError(domain: "www.zyfilife.com", code: 1, userInfo: nil)
-                failure(error)
+                failure(response.result.error as! NSError)
             }
         }
     }

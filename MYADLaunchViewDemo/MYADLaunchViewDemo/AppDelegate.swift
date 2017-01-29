@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("广告页显示结束")
         }
         //optional, default 0
-        adLaunchView.bottomDistance = 200
+        adLaunchView.bottomDistance = 150
         return true
     }
 
