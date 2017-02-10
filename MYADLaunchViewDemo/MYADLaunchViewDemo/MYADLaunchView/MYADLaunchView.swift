@@ -24,8 +24,6 @@ class MYADLaunchView: UIView {
     
     fileprivate var endDisplayingBlock: (()->Void)?
     
-    
-    
     var manager: SessionManager?
     
     var isFirstLaunch: Bool {
@@ -76,7 +74,7 @@ class MYADLaunchView: UIView {
     }()
     
     lazy var launchImageView: UIImageView =  {
-        let view = UIImageView(frame: UIScreen.main.bounds)
+        let view = UIImageView(frame: CGRect(x: 0, y: 20, width: kScreenWidth, height: kScreenHeight-20))
         view.image = #imageLiteral(resourceName: "default")
         return view
     }()
@@ -92,14 +90,15 @@ class MYADLaunchView: UIView {
         manager = SessionManager(configuration: confige)
         UIApplication.shared.keyWindow?.addSubview(self)
         self.getImagePathFromServers(success: { (imagePath) in
-            self.isShowFlyAnimation = true
-            self.displayAdImageView(imagePath: imagePath, success: { 
-                self.addSubview(self.adImageView)
+            
+            self.displayAdImageView(imagePath: imagePath, success: {
                 self.displayProgressView()
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+3, execute: {
+                    self.isShowFlyAnimation = true
                     self.removeFromSuperview()
                 })
-            }, failure: { 
+            }, failure: {
+                self.isShowFlyAnimation = false
                 self.removeFromSuperview()
             })
         }) { (error) in
