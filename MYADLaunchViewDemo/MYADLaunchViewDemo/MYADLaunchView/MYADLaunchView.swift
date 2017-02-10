@@ -93,16 +93,13 @@ class MYADLaunchView: UIView {
             
             self.displayAdImageView(imagePath: imagePath, success: {
                 self.displayProgressView()
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+3, execute: {
-                    self.isShowFlyAnimation = true
-                    self.removeFromSuperview()
-                })
+                self.isShowFlyAnimation = true
+                self.perform(#selector(MYADLaunchView.removeFromSuperview), with: nil, afterDelay: 3)
             }, failure: {
                 self.isShowFlyAnimation = false
                 self.removeFromSuperview()
             })
         }) { (error) in
-            print(error.debugDescription)
             self.isShowFlyAnimation = false
             self.removeFromSuperview()
         }
@@ -179,6 +176,8 @@ class MYADLaunchView: UIView {
     }
     
     func skip() {
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(MYADLaunchView.removeFromSuperview), object: nil)
+        self.isShowFlyAnimation = true
         self.removeFromSuperview()
     }
 }
