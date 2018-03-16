@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40E5E7DE205BB1C400B95E25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5E7DD205BB1C400B95E25 /* AppDelegate.swift */; };
+		40E5E7E0205BB1C400B95E25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5E7DF205BB1C400B95E25 /* ViewController.swift */; };
+		40E5E7E3205BB1C400B95E25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E5E7E1205BB1C400B95E25 /* Main.storyboard */; };
+		40E5E7E5205BB1C400B95E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E5E7E4205BB1C400B95E25 /* Assets.xcassets */; };
+		40E5E7E8205BB1C400B95E25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E5E7E6205BB1C400B95E25 /* LaunchScreen.storyboard */; };
+		40E5E7F1205BB22500B95E25 /* ZYFADLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5E7F0205BB22500B95E25 /* ZYFADLaunchView.swift */; };
+		40E5E7F7205BB44900B95E25 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E5E7F3205BB44900B95E25 /* DALabeledCircularProgressView.m */; };
+		40E5E7F8205BB44900B95E25 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E5E7F4205BB44900B95E25 /* DACircularProgressView.m */; };
+		E8D41D9055D3FB71A0AF6C4E /* Pods_ZYFADLaunchExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695A0A12BC866BD56F1C19C2 /* Pods_ZYFADLaunchExample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		40E5E7DA205BB1C400B95E25 /* ZYFADLaunchExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYFADLaunchExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40E5E7DD205BB1C400B95E25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		40E5E7DF205BB1C400B95E25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		40E5E7E2205BB1C400B95E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40E5E7E4205BB1C400B95E25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40E5E7E7205BB1C400B95E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40E5E7E9205BB1C400B95E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40E5E7F0205BB22500B95E25 /* ZYFADLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYFADLaunchView.swift; sourceTree = "<group>"; };
+		40E5E7F3205BB44900B95E25 /* DALabeledCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALabeledCircularProgressView.m; sourceTree = "<group>"; };
+		40E5E7F4205BB44900B95E25 /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
+		40E5E7F5205BB44900B95E25 /* DALabeledCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DALabeledCircularProgressView.h; sourceTree = "<group>"; };
+		40E5E7F6205BB44900B95E25 /* DACircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACircularProgressView.h; sourceTree = "<group>"; };
+		40E5E7FC205BB47F00B95E25 /* ZYFADLaunchExample_bridge_header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYFADLaunchExample_bridge_header.h; sourceTree = "<group>"; };
+		695A0A12BC866BD56F1C19C2 /* Pods_ZYFADLaunchExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZYFADLaunchExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A1010DA51DFFAC0904410EC /* Pods-ZYFADLaunchExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYFADLaunchExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYFADLaunchExample/Pods-ZYFADLaunchExample.debug.xcconfig"; sourceTree = "<group>"; };
+		7E1226F37EE798B0D6B9DA8B /* Pods-ZYFADLaunchExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYFADLaunchExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYFADLaunchExample/Pods-ZYFADLaunchExample.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40E5E7D7205BB1C400B95E25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8D41D9055D3FB71A0AF6C4E /* Pods_ZYFADLaunchExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40E5E7D1205BB1C400B95E25 = {
+			isa = PBXGroup;
+			children = (
+				40E5E7F2205BB44900B95E25 /* DACircularProgress */,
+				40E5E7EF205BB1F900B95E25 /* ZYFADLaunch */,
+				40E5E7DC205BB1C400B95E25 /* ZYFADLaunchExample */,
+				40E5E7DB205BB1C400B95E25 /* Products */,
+				FAA78A9DF9CA4D2FAB954E24 /* Pods */,
+				9CED7C4D03ADB4E9B56E2EC6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		40E5E7DB205BB1C400B95E25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40E5E7DA205BB1C400B95E25 /* ZYFADLaunchExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40E5E7DC205BB1C400B95E25 /* ZYFADLaunchExample */ = {
+			isa = PBXGroup;
+			children = (
+				40E5E7DD205BB1C400B95E25 /* AppDelegate.swift */,
+				40E5E7DF205BB1C400B95E25 /* ViewController.swift */,
+				40E5E7E1205BB1C400B95E25 /* Main.storyboard */,
+				40E5E7E4205BB1C400B95E25 /* Assets.xcassets */,
+				40E5E7E6205BB1C400B95E25 /* LaunchScreen.storyboard */,
+				40E5E7E9205BB1C400B95E25 /* Info.plist */,
+				40E5E7FC205BB47F00B95E25 /* ZYFADLaunchExample_bridge_header.h */,
+			);
+			path = ZYFADLaunchExample;
+			sourceTree = "<group>";
+		};
+		40E5E7EF205BB1F900B95E25 /* ZYFADLaunch */ = {
+			isa = PBXGroup;
+			children = (
+				40E5E7F0205BB22500B95E25 /* ZYFADLaunchView.swift */,
+			);
+			name = ZYFADLaunch;
+			path = ../ZYFADLaunch;
+			sourceTree = "<group>";
+		};
+		40E5E7F2205BB44900B95E25 /* DACircularProgress */ = {
+			isa = PBXGroup;
+			children = (
+				40E5E7F3205BB44900B95E25 /* DALabeledCircularProgressView.m */,
+				40E5E7F4205BB44900B95E25 /* DACircularProgressView.m */,
+				40E5E7F5205BB44900B95E25 /* DALabeledCircularProgressView.h */,
+				40E5E7F6205BB44900B95E25 /* DACircularProgressView.h */,
+			);
+			name = DACircularProgress;
+			path = ../DACircularProgress;
+			sourceTree = "<group>";
+		};
+		9CED7C4D03ADB4E9B56E2EC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				695A0A12BC866BD56F1C19C2 /* Pods_ZYFADLaunchExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAA78A9DF9CA4D2FAB954E24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A1010DA51DFFAC0904410EC /* Pods-ZYFADLaunchExample.debug.xcconfig */,
+				7E1226F37EE798B0D6B9DA8B /* Pods-ZYFADLaunchExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40E5E7D9205BB1C400B95E25 /* ZYFADLaunchExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40E5E7EC205BB1C400B95E25 /* Build configuration list for PBXNativeTarget "ZYFADLaunchExample" */;
+			buildPhases = (
+				9545F728D89D6CDD77DFB169 /* [CP] Check Pods Manifest.lock */,
+				40E5E7D6205BB1C400B95E25 /* Sources */,
+				40E5E7D7205BB1C400B95E25 /* Frameworks */,
+				40E5E7D8205BB1C400B95E25 /* Resources */,
+				46EB4AE928608D476A8EC7B5 /* [CP] Embed Pods Frameworks */,
+				22BA0020312F926861D2AA8C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZYFADLaunchExample;
+			productName = ZYFADLaunchExample;
+			productReference = 40E5E7DA205BB1C400B95E25 /* ZYFADLaunchExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40E5E7D2205BB1C400B95E25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = com.zhuyifeng;
+				TargetAttributes = {
+					40E5E7D9205BB1C400B95E25 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 40E5E7D5205BB1C400B95E25 /* Build configuration list for PBXProject "ZYFADLaunchExample" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40E5E7D1205BB1C400B95E25;
+			productRefGroup = 40E5E7DB205BB1C400B95E25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40E5E7D9205BB1C400B95E25 /* ZYFADLaunchExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40E5E7D8205BB1C400B95E25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E5E7E8205BB1C400B95E25 /* LaunchScreen.storyboard in Resources */,
+				40E5E7E5205BB1C400B95E25 /* Assets.xcassets in Resources */,
+				40E5E7E3205BB1C400B95E25 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22BA0020312F926861D2AA8C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYFADLaunchExample/Pods-ZYFADLaunchExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46EB4AE928608D476A8EC7B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZYFADLaunchExample/Pods-ZYFADLaunchExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYFADLaunchExample/Pods-ZYFADLaunchExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9545F728D89D6CDD77DFB169 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZYFADLaunchExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40E5E7D6205BB1C400B95E25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E5E7F8205BB44900B95E25 /* DACircularProgressView.m in Sources */,
+				40E5E7F1205BB22500B95E25 /* ZYFADLaunchView.swift in Sources */,
+				40E5E7F7205BB44900B95E25 /* DALabeledCircularProgressView.m in Sources */,
+				40E5E7E0205BB1C400B95E25 /* ViewController.swift in Sources */,
+				40E5E7DE205BB1C400B95E25 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		40E5E7E1205BB1C400B95E25 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40E5E7E2205BB1C400B95E25 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		40E5E7E6205BB1C400B95E25 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40E5E7E7205BB1C400B95E25 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40E5E7EA205BB1C400B95E25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		40E5E7EB205BB1C400B95E25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40E5E7ED205BB1C400B95E25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A1010DA51DFFAC0904410EC /* Pods-ZYFADLaunchExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6PV3E3Y4LF;
+				INFOPLIST_FILE = ZYFADLaunchExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuyifeng.ZYFADLaunchExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ZYFADLaunchExample/ZYFADLaunchExample_bridge_header.h;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40E5E7EE205BB1C400B95E25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E1226F37EE798B0D6B9DA8B /* Pods-ZYFADLaunchExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6PV3E3Y4LF;
+				INFOPLIST_FILE = ZYFADLaunchExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuyifeng.ZYFADLaunchExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ZYFADLaunchExample/ZYFADLaunchExample_bridge_header.h;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40E5E7D5205BB1C400B95E25 /* Build configuration list for PBXProject "ZYFADLaunchExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40E5E7EA205BB1C400B95E25 /* Debug */,
+				40E5E7EB205BB1C400B95E25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40E5E7EC205BB1C400B95E25 /* Build configuration list for PBXNativeTarget "ZYFADLaunchExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40E5E7ED205BB1C400B95E25 /* Debug */,
+				40E5E7EE205BB1C400B95E25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40E5E7D2205BB1C400B95E25 /* Project object */;
+}
